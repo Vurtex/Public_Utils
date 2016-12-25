@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <!-- 下拉刷新和上拉加载 -->
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="app_name">Crm_util</string>
+    <string name="Is_loading">努力加载中...</string>
+<!-- 测试地址 -->
+    <!-- 上地测试ssl <string name="IP_HTTP">https://192.168.62.51:9021</string> -->
+    <!-- 上地测试非ssl <string name="IP_HTTP">http://192.168.62.53:7022</string> -->
+    <!-- 电科院测试非ssl <string name="IP_HTTP">http://192.168.3.101:7012</string> -->
+    <!-- 电科院测试ssl <string name="IP_HTTP">https://192.168.3.101:17012</string> -->
+    <!-- 总部基地测试非ssl <string name="IP_HTTP">http://192.168.181.25:17011</string> -->
+    <!-- 总部基地测试非ssl2 <string name="IP_HTTP">http://192.168.199.50:14010</string> -->
+    <!-- 公网 <string name="IP_HTTP">http://202.106.80.146:14010</string> -->
+    <string name="IP_HTTP">http://202.106.80.146:14010</string>
+
+<string name="plan_describe">计划描述</string>
+<string name="plan_type">计划类型</string>
+<string name="plan_check_quantity">计划检查数量</string>
+    <string name="plan_exector_mouth">计划执行月份</string>
+    <string name="exector_mouth">执行月份</string>
+    <string name="plan_exector_year">计划年度</string>
+    <string name="check_content">检查内容</string>
+    <string name="check_quantity">检查数量</string>
+    <string name="custom_no">用户编号</string>
+    <string name="electronic_supply_department">供电单位</string>
+    <string name="application_department">申请部门</string>
+    <string name="application_no">申请编号</string>
+    <string name="mission_sign">任务签收</string>
+  <!-- 用户档案修改 -->
+    <string name="customor_name">用户名称</string>
+    <string name="customor_sort">用户分类</string>
+    <string name="customor_addr">用户地址</string>
+    <string name="industry_category">行业分类</string>
+    <string name="mobile_phone_number">移动电话</string>
+    <string name="contact_number">联系电话</string>
+    <string name="energy_Intensive_industry">高耗能行业</string>
+    <string name="electricity_supply_unit">供电单位</string>
+    <string name="running_capacity">运行容量</string>
+    <string name="applicants">申请人员</string>
+    <string name="application_date">申请时间</string>
+    <string name="cusname">客户名称</string>
+    <string name="cusno">客户编号</string>
+    <string name="legalrepresentative">法人代表</string>
+    <string name="cusimportantLevel">客户重要性等级</string>
+    <string name="loadproperty">负荷性质</string>
+    <string name="electriccategory">用电类别</string>
+    <string name="volt">供电电压</string>
+    <string name="contractcapacity">合同容量</string>
+    <string name="bank">增值税银行</string>
+    <string name="vatName">增值税名</string>
+    <string name="vatAcct">增值税账号</string>
+    <string name="submit_txt">提交 </string>
+    
+    <!-- 我的工单专项检查 -->
+    <string name="checker">检查人员</string>
+    <string name="check_date">检查时间</string>
+    <string name="check_result">检查结果</string>
+    <string name="check_problem">检查问题</string>
+    <string name="problem_in_check">在检查过程中发现的问题</string>
+    <string name="importance_level">重要性等级</string>
+    <string name="importance_level_sec">重要等级</string>
+    <string name="describe_about_hidden_danger">对安全隐患的现象进行描述</string>
+    <string name="if_solved_in_time">发现的安全隐患是否现场就地消除</string>
+    <string name="danger_solve_time_in_plan">计划消除安全隐患的日期</string>
+    <string name="danger_solve_time_in_reality">实际消除安全隐患的日期</string>
+    <string name="danger_existed_or_not">有无隐患</string>
+    <string name="defects_level">缺陷等级</string>
+    <string name="handling_person">处理人员</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    
+    <!-- 我的工单安全隐患类型 -->
+    <string name="danger_type">安全隐患类型</string>
+    <!-- hint -->
+    <string name="hint_click_to_obtain_date">点击获取时间</string>
+    <string name="hint_click_to_obtain">点击获取</string>
+    <string name="hint_input_no">请输入编号</string>
+    
+    <!-- 创建任务/公告 -->
+    <string name="missiontitle">任务标题</string>
+    <string name="missioncontent">任务内容</string>
+    <string name="customer_name">客户名称</string>
+    <string name="missionexector">任务执行人</string>
+    <string name="missiondeadtime">任务截止时间</string>
+    <string name="missionhint">请输入文字</string>
+    <string name="missiondeadtimehint">%1$d年%2$d月%3$d日</string>
+    <string name="noticetitle">公告标题:</string>
+    <string name="noticecontent">公告内容:</string>
+    <string name="titlehint">请输入标题</string>
+    <string name="contenthint">请输入内容</string>
+    <string name="confirm_txt">确定</string>
+    <string name="cancel_txt">取消</string>
+    <string name="notice_txt">提醒</string>
+</resources>

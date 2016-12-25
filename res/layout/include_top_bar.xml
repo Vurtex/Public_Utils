@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_include_top_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/top_bar_bg" >
+
+    <ImageView
+        android:id="@+id/img_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ease_common_tab_bg"
+        android:padding="10dp"
+        android:src="@drawable/btn_left_img" />
+
+    <ImageView
+        android:id="@+id/img_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ease_common_tab_bg"
+        android:padding="10dp"
+        android:src="@drawable/btn_add_img" />
+
+    <TextView
+        android:id="@+id/img_btn_right_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ease_common_tab_bg"
+        android:padding="10dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="未检查用户明细"
+        android:textColor="@color/top_bar_text_color"
+        android:textSize="20sp" />
+
+</RelativeLayout>

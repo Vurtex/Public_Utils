@@ -1,0 +1,538 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/top_bar_bg"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/include_top_bar"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="7dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/application_no" />
+
+                <TextView
+                    android:id="@+id/tv_application_no"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/custom_no" />
+
+                <TextView
+                    android:id="@+id/tv_custom_no"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/customor_name" />
+
+                <TextView
+                    android:id="@+id/tv_custom_name"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/contact_number" />
+
+                <TextView
+                    android:id="@+id/tv_contact_number"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:inputType="phone"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/customor_addr" />
+
+                <TextView
+                    android:id="@+id/tv_custom_address"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/checker" />
+
+                <TextView
+                    android:id="@+id/et_checker"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/check_content" />
+
+                <EditText
+                    android:id="@+id/tv_check_content"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:singleLine="false"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/check_date" />
+
+                <TextView
+                    android:id="@+id/tv_check_date"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:hint="@string/hint_click_to_obtain_date"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/check_result" />
+
+                <TextView
+                    android:id="@+id/tv_check_result"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:inputType="text"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/check_problem" />
+
+                <EditText
+                    android:id="@+id/tv_check_problem"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:hint="@string/missionhint"
+                    android:maxLength="1000"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/importance_level_sec" />
+
+                <TextView
+                    android:id="@+id/tv_importance_level"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:hint="@string/missionhint"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    style="@style/customor_info_tx_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/danger_existed_or_not" />
+
+                <TextView
+                    android:id="@+id/tv_danger_existed_or_not"
+                    style="@style/customor_info_tx_right"
+                    android:layout_weight="3"
+                    android:hint="@string/missionhint"
+                    android:textColorHint="#d7d7d7" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_buglist"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/problem_in_check"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <EditText
+                    android:id="@+id/et_problem_in_check"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:hint="@string/missionhint"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/common_text_size_small_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/describe_about_hidden_danger"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <EditText
+                    android:id="@+id/et_describe_about_hidden_danger"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:hint="@string/missionhint"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/common_text_size_small_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="17dp"
+                    android:text="@string/if_solved_in_time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <RadioGroup
+                    android:id="@+id/rb_if_solved_in_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/no" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/danger_solve_time_in_plan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_danger_solve_time_in_plan"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:hint="@string/hint_click_to_obtain_date"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/common_text_size_small_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/danger_solve_time_in_reality"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_danger_solve_time_in_reality"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:hint="@string/hint_click_to_obtain_date"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/common_text_size_small_3"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/defects_level"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_defects_level"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:hint="@string/defects_level"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/common_text_size_small_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/handling_person"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_size_small" />
+
+                <EditText
+                    android:id="@+id/et_handling_person"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:hint="@string/missionhint"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#d7d7d7"
+                    android:textSize="@dimen/common_text_size_small_3" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/btn_check_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_sign_on_selector"
+                    android:text="@string/submit_txt"
+                    android:textColor="@drawable/btn_sign_on_textcolor_selector"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

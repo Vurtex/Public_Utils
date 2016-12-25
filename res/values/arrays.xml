@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <declare-styleable name="CircleTextImageView">
+        <attr name="citv_border_width" format="dimension" />
+        <attr name="citv_border_color" format="color" />
+        <attr name="citv_border_overlay" format="boolean" />
+        <attr name="citv_fill_color" format="color" />
+        <attr name="citv_text_text" format="string" />
+        <attr name="citv_text_color" format="color" />
+        <attr name="citv_text_size" format="dimension" />
+        <attr name="citv_text_padding" format="dimension" />
+    </declare-styleable>
+
+    <string-array name="date">
+        <item>阿妹</item>
+        <item>阿郎</item>
+        <item>陈奕迅</item>
+        <item>周杰伦</item>
+        <item>曾一鸣</item>
+        <item>成龙</item>
+        <item>王力宏</item>
+        <item>汪峰</item>
+        <item>王菲</item>
+        <item>那英</item>
+        <item>张伟</item>
+        <item>张学友</item>
+        <item>李德华</item>
+        <item>郑源</item>
+        <item>白水水</item>
+        <item>白天不亮</item>
+        <item>陈龙</item>
+        <item>陈丽丽</item>
+        <item>哈林</item>
+        <item>高进</item>
+        <item>高雷</item>
+        <item>阮今天</item>
+        <item>龚琳娜</item>
+        <item>苏醒</item>
+        <item>苏永康</item>
+        <item>陶喆</item>
+        <item>沙宝亮</item>
+        <item>宋冬野</item>
+        <item>宋伟</item>
+        <item>袁成杰</item>
+        <item>戚薇</item>
+        <item>齐大友</item>
+        <item>齐天大圣</item>
+        <item>品冠</item>
+        <item>吴克群</item>
+        <item>动力火车</item>
+        <item>伍佰</item>
+        <item>#蔡依林</item>
+        <item>陈羽</item>
+        <item>张三</item>
+        <item>李四</item>
+    </string-array>
+<!--     客户类型 -->
+    <string-array name="customor_sort">
+        <item>高压</item>
+        <item>低压非居民</item>
+        <item>低压居民</item>
+    </string-array>
+<!--     负荷性质 -->
+    <string-array 
+        name="loadproperty">
+        <item >一类</item>
+        <item >二类</item>
+        <item >三类</item>
+    </string-array>
+    <string-array name="industry_category">
+        <item>行业分类一</item>
+        <item>行业分类二</item>
+        <item>行业分类三</item>
+        <item>行业分类四</item>
+        <item>行业分类五</item>
+        <item>行业分类六</item>
+    </string-array>
+    <string-array name="energy_Intensive_industry">
+        <item>钢铁</item>
+        <item>电解铝</item>
+        <item>铁合金</item>
+        <item>水泥</item>
+        <item>电石</item>
+        <item>烧碱</item>
+        <item>黄磷</item>
+        <item>锌冶炼</item>
+        <item>造纸</item>
+        <item>铸造</item>
+        <item>化肥</item>
+        <item>碳化硅</item>
+        <item>其他</item>
+        <item>造纸</item>
+        <item>铸造</item>
+        <item>化肥</item>
+        <item>碳化硅</item>
+        <item>炭素</item>
+    </string-array>
+    <string-array name="electricity_supply_unit">
+        <item>单位一</item>
+        <item>单位二</item>
+        <item>单位三</item>
+        <item>单位四</item>
+        <item>单位五</item>
+        <item>单位六</item>
+    </string-array>
+    <string-array name="applicants">
+        <item>申请人一</item>
+        <item>申请人二</item>
+        <item>申请人三</item>
+        <item>申请人四</item>
+        <item>申请人五</item>
+        <item>申请人六</item>
+    </string-array>
+    <string-array name="electronic_supply_department">
+        <item>单位一</item>
+        <item>单位二</item>
+        <item>单位三</item>
+        <item>单位四</item>
+        <item>单位五</item>
+        <item>单位六</item>
+    </string-array>
+    <string-array name="application_department">
+        <item>申请部门一</item>
+        <item>申请部门二</item>
+        <item>申请部门三</item>
+        <item>申请部门四</item>
+        <item>申请部门五</item>
+        <item>申请部门六</item>
+    </string-array>
+    <string-array name="hidden_danger_type">
+        <item>隐患类型一</item>
+        <item>隐患类型二</item>
+        <item>隐患类型三</item>
+        <item>隐患类型四</item>
+        <item>隐患类型五</item>
+        <item>隐患类型六</item>
+    </string-array>
+<!--     重要性等级 -->
+    <string-array name="importance_level">
+        <item>特级重要用户</item>
+        <item>一级重要用户</item>
+        <item>二级重要用户</item>
+        <item>临时性重要用户</item>
+    </string-array>
+<!--     计划类型 -->
+
+  <string-array name="plantype">
+        <item>专项检查</item>
+        <item>保电检查</item>
+        <item>季节性安全检查</item>
+        <item>高危重要客户认定</item>
+        <item>其它专项检查</item>
+<!--         <item>周期检查</item> -->
+<!--         <item>营业普查</item> -->
+<!--         <item>其他检查任务</item> -->
+<!--         <item>其他专业转来检查任务</item> -->
+<!--         <item>客户用电事故处理</item> -->
+<!--         <item>采集数据异常检查</item> -->
+<!--         <item>预防性试验</item> -->
+<!--         <item>其他临时检查</item> -->
+    </string-array>
+	<string-array name="plantype_code">
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>203</item>
+        <item>299</item>
+<!--         <item>100</item> -->
+<!--         <item>300</item> -->
+<!--         <item>900</item> -->
+<!--         <item>901</item> -->
+<!--         <item>902</item> -->
+<!--         <item>903</item> -->
+<!--         <item>998</item> -->
+<!--         <item>999</item> -->
+    </string-array>
+    <string-array name="defects_level">
+        <item>一般缺陷</item>
+        <item>重大缺陷</item>
+        <item>紧急缺陷</item>
+    </string-array>
+    <string-array name="result">
+        <item>完成</item>
+        <item>未完成</item>
+    </string-array>
+ <string-array name="volt_level">
+        <item>交流 6V</item>
+        <item>交流 12V</item>
+        <item>交流 24V</item>
+        <item>交流 36V</item>
+        <item>交流 48V</item>
+        <item>交流 110V</item>
+        <item>交流 220V</item>
+        <item>交流 380V</item>
+        <item>交流 660V</item>
+        <item>交流 1000V(含1140V)</item>
+        <item>交流 600V</item>
+        <item>交流 750V</item>
+        <item>交流 1500V</item>
+        <item>交流 3000V</item>
+        <item>交流 2500V</item>
+        <item>交流 3kV</item>
+        <item>交流 6kV</item>
+        <item>交流 13.8kV</item>
+        <item>交流 20kV</item>
+        <item>交流 35kV</item>
+        <item>交流 66kV</item>
+        <item>交流 110kV</item>
+        <item>交流 220kV</item>
+        <item>交流 330kV</item>
+        <item>交流 500kV</item>
+        <item>交流 750kV</item>
+        <item>交流 1000kV</item>
+        <item>直流 6V</item>
+        <item>直流 12V</item>
+        <item>直流 24V</item>
+        <item>直流 36V</item>
+        <item>直流 48V</item>
+        <item>直流 110V</item>
+        <item>直流 220V</item>
+        <item>直流 500kV</item>
+        <item>直流 800kV</item>
+        <item>直流 600V</item>
+        <item>直流 750V</item>
+        <item>直流 1500V</item>
+        <item>直流 3000V</item>
+        
+    </string-array>
+    <!-- 通用code码 -->
+    <string-array name="double_length_common_code">
+        <item >01</item>
+        <item >02</item>
+        <item >03</item>
+        <item >04</item>
+    </string-array>
+    <string-array name="one_length_common_code">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+    </string-array>
+    
+    <string-array name="workerName">
+        <item>白水水</item>
+        <item>陈丽丽</item>
+        <item>高进</item>
+        <item>高雷</item>
+        <item>阮今天</item>
+        <item>龚琳娜</item>
+        <item>苏醒</item>
+        <item>苏永康</item>
+        <item>宋冬野</item>
+        <item>宋伟</item>
+        <item>袁成杰</item>
+        <item>戚薇</item>
+        <item>品冠</item>
+        <item>吴克群</item>
+        <item>陈羽</item>
+        <item>张三</item>
+        <item>李四</item>
+    </string-array>
+    <string-array name="workerNo">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+    </string-array>
+     <string-array name="howtoquerycustomorinfo">
+        <item >1、查看自己负责客户信息</item>
+        <item>点击“CRM”功能中的“客户”菜单，获取客户经理自己负责的客户列表信息。选择列表中要查看的客户，进入客户信息界面，可以查询客户的档案、用电等基本信息。</item>
+          <item >2、查看非自己负责客户信息</item>
+        <item>点击“CRM”功能中的“客户查询”菜单，通过客户名称、客户编号、电表编号等查询条件，查看非自己负责客户。选择查询出的客户，进入客户信息界面，可以查询客户的档案、用电等基本信息。</item>
+    </string-array>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/btn_check_more_comment"
+    android:background="@drawable/btn_selector"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/btn_check_more_comment"
+        
+        android:layout_gravity="center_vertical"
+        />
+    <TextView 
+        android:text="查看全部评论"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        
+        />
+    
+</LinearLayout>

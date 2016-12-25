@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/top_bar_bg"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/include_top_bar"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="查询数据为空"
+        android:textColor="#66000000"
+        android:paddingTop="5dp"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <com.puhua.crm.view.RefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <ListView
+            android:id="@+id/lv_my_job"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/im_line_color"
+            android:dividerHeight="1px"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:focusable="true"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="normal" >
+        </ListView>
+    </com.puhua.crm.view.RefreshLayout>
+
+</LinearLayout>
