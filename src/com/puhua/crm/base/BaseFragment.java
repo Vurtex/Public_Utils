@@ -59,6 +59,9 @@ public class BaseFragment extends Fragment implements toastListener {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				if (null!=js) {
+					
+				
 				try {
 					String rtnMsg = js.get("rtnCode") + "";
 					if (rtnMsg.equals("2001")) {
@@ -94,7 +97,7 @@ public class BaseFragment extends Fragment implements toastListener {
 					}
 				} else
 					showToast("返回数据验签失败！");
-
+				}
 				break;
 
 			default:

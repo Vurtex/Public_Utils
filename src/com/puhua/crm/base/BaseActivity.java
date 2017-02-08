@@ -17,15 +17,15 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
@@ -68,6 +68,75 @@ public class BaseActivity extends AppCompatActivity implements toastListener {
 		public void run() {
 			mToast.cancel();
 		}
+	};
+	private Handler mhandler=new Handler(){
+		@Override
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case 0:
+				boolean doCheck = false;
+				JSONObject js = null;
+				String restr=(String)msg.obj;
+				Bundle b = msg.getData();
+				 int i = b.getInt("i");
+				try {
+					js = new JSONObject(restr);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if (null!=js) {
+					
+				
+				try {
+					String rtnMsg = js.get("rtnCode") + "";
+					if (rtnMsg.equals("2001")) {
+						// 用户身份失效，重登
+						showToast("用户身份失效，请重新登录！");
+						Intent intent=new Intent(Constants.BACK_LOGIN_ACTION);
+						context.sendBroadcast(intent);
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				String json  = b.getString("json");
+				String sign = null;
+				if (null != js && js.has("sign")) {
+					try {
+						sign = js.getString("sign");
+					} catch (JSONException e) {
+						e.printStackTrace();
+					}
+				} else {
+					showToast("请求数据异常");
+					return;
+				}
+				doCheck = RSASignature.doCheck(json, sign, Boot.SERVER_PUBLIC_KEY);
+				if (doCheck) {
+					if (i == 0) {
+						onMyResponse(js);
+					}else if (i == 1000) {
+						onMyResponse3(js);
+					}else if (i==1004) {
+						onMyResponse4(js);
+					}else if (i==1005) {
+						onMyResponse5(js);
+					} else {
+						onMyResponse2(js);
+
+					}
+				} else
+					showToast("返回数据验签失败！");
+				}
+				break;
+
+			default:
+				break;
+			}
+			
+			
+		};
 	};
 
 	@Override
@@ -144,7 +213,6 @@ public class BaseActivity extends AppCompatActivity implements toastListener {
 	}
 
 	private void stringRequestPostHttpExample(String code, final String json, final int i) {
-		Log.e("www", getString(R.string.IP_HTTP)+"");
 		VolleyDataRequester.withSelfCertifiedHttps(this).setUrl(getString(R.string.IP_HTTP) + Constants.WEB_SERVER_URL)
 				// .setBody( getPostParamsCF(code) )
 				.setMethod(VolleyDataRequester.Method.POST)
@@ -155,60 +223,107 @@ public class BaseActivity extends AppCompatActivity implements toastListener {
 						// callback
 						Log.e("返回：", response + "");
 
-						boolean doCheck = false;
 						JSONObject js = null;
 						if (Constants.isEncrypt) {
-							// 客户端的私钥解密过程
-							try {
-								String restr = RSAEncrypt.decrypt(
-										RSAEncrypt.loadPrivateKeyByStr(Boot.CLIENT_PRIVATE_KEY),
-										response.toString());
-								js = new JSONObject(restr);
-							} catch (JSONException e) {
-								e.printStackTrace();
-							} catch (Exception e1) {
-								e1.printStackTrace();
-							}
-							String sign = null;
-							if (null != js && js.has("sign")) {
-								try {
-									sign = js.getString("sign");
-								} catch (JSONException e) {
-									e.printStackTrace();
-								}
-							} else {
-								showToast("请求数据异常");
-								return;
-							}
-							doCheck = RSASignature.doCheck(json, sign, Boot.SERVER_PUBLIC_KEY);
-						} else {
-							doCheck = true;
+							showdata(response,json,i);
+						}else{
+							
 							try {
 								js = new JSONObject(response);
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
+						if (i == 0) {
+							onMyResponse(js);
+
+						}else if (i == 1000) {
+							onMyResponse3(js);
+						} else {
+							onMyResponse2(js);
+
 						}
-						if (doCheck) {
-							if (i == 0) {
-								onMyResponse(js);
-
-							}
-							else if (i == 1000) {
-								onMyResponse3(js);
-							}else {
-								onMyResponse2(js);
-
-							}
-						} else
-							showToast("返回数据验签失败！");
-
-						Log.e("js------", js + "");
+						}
+//						if (Constants.isEncrypt) {
+//							// 客户端的私钥解密过程
+//							try {
+//								String restr = RSAEncrypt.decrypt(
+//										RSAEncrypt.loadPrivateKeyByStr(Boot.CLIENT_PRIVATE_KEY),
+//										response.toString());
+//								js = new JSONObject(restr);
+//							} catch (JSONException e) {
+//								e.printStackTrace();
+//							} catch (Exception e1) {
+//								e1.printStackTrace();
+//							}
+//							String sign = null;
+//							if (null != js && js.has("sign")) {
+//								try {
+//									sign = js.getString("sign");
+//								} catch (JSONException e) {
+//									e.printStackTrace();
+//								}
+//							} else {
+//								showToast("请求数据异常");
+//								return;
+//							}
+//							doCheck = RSASignature.doCheck(json, sign, Boot.SERVER_PUBLIC_KEY);
+//						} else {
+//							doCheck = true;
+//							try {
+//								js = new JSONObject(response);
+//							} catch (JSONException e) {
+//								// TODO Auto-generated catch block
+//								e.printStackTrace();
+//							}
+//						}
+//						if (doCheck) {
+//							if (i == 0) {
+//								onMyResponse(js);
+//
+//							}
+//							else if (i == 1000) {
+//								onMyResponse3(js);
+//							}else {
+//								onMyResponse2(js);
+//
+//							}
+//						} else
+//							showToast("返回数据验签失败！");
+//
+//						Log.e("js------", js + "");
 					}
 
 				}).requestString(json);
 	}
+	
+	private void showdata(final String response,final String json,final int i){
+		Thread thread=new Thread(){
+			@Override
+			public void run() {
+				super.run();
+				try {
+					String restr = RSAEncrypt.decrypt( RSAEncrypt.loadPrivateKeyByStr(Boot.CLIENT_PRIVATE_KEY),
+							response.toString());
+					Message msg = new Message();
+					Bundle b = new Bundle(); 
+					b.putString("json", json); 
+					 b.putInt("i", i); 
+					msg.setData(b); 
+					msg.what = 0;
+					msg.obj=restr;
+					mhandler.sendMessage(msg);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		thread.start();
+		thread=null;
+		System.gc();
+		
+		
+	};
 
 	private void stringRequestPostHttpExamplem(String code, final String json, final int i,
 			final PullToRefreshLayout pullToRefreshLayout) {
@@ -338,6 +453,10 @@ public class BaseActivity extends AppCompatActivity implements toastListener {
 	public void onMyResponse(JSONObject json) {
 	};
 	public void onMyResponse3(JSONObject json) {
+	};
+	public void onMyResponse4(JSONObject json) {
+	};
+	public void onMyResponse5(JSONObject json) {
 	};
 
 	public void onMyResponsem(JSONObject json, final PullToRefreshLayout pullToRefreshLayout) {

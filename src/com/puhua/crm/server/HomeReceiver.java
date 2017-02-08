@@ -1,7 +1,5 @@
 package com.puhua.crm.server;
 
-import com.puhua.crm.util.Utils;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
