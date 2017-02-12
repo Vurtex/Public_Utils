@@ -4,3 +4,15 @@ bin/public_utils.jar
 *.jar
 
 bin/public_utils.jar
+
+*.svn-base
+
+*.class
+
+*.class
+
+*.class
+
+bin/classes/com/puhua/crm/server/HomeReceiver.class
+
+bin/public_utils.jar
